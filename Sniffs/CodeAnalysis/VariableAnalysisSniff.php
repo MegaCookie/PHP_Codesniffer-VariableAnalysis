@@ -12,6 +12,10 @@
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
+
+use PHP_CodeSniffer\Sniffs\Sniff as PHP_CodeSniffer_Sniff;
+use PHP_CodeSniffer\Files\File as PHP_CodeSniffer_File;
+
 /**
  * Holds details of a scope.
  *
