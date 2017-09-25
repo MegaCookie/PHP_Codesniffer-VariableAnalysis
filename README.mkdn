@@ -13,6 +13,22 @@ variable use.
 INSTALLATION
 ------------
 
+Install `./Sniffs/CodeAnalysis/VariableAnalysisSniff.php` to `/usr/local/Cellar/php-code-sniffer/3.1.0/src/Standards/Generic/Sniffs/CodeAnalysis`  
+https://stackoverflow.com/questions/30933884/how-to-add-multiple-paths-for-phpcs   
+Is defined in: `/usr/local/Cellar/php-code-sniffer/3.1.0/CodeSniffer.conf`   
+Dan doe je bijv: `'installed_paths' => '/Users/Jesse/git/phpcs_variable_analysis'`   
+Dit kan ook via code: `phpcs --config-set installed_paths /Users/Jesse/git/phpcs_variable_analysis`  
+Maar het beste lijkt me toch:
+```xml
+<config name="installed_paths" value="/Users/Jesse/git/phpcs_variable_analysis" />
+```
+en dan in je ruleset xml:
+```xml
+<rule ref="phpcs_variable_analysis.CodeAnalysis.VariableAnalysis" />
+```
+
+Zoiets
+
 Run ./install.sh -h to get install help.
 
 For a default install of PHP_Codesniffer via PEAR with PEAR in ~/pear you should be
